@@ -1,4 +1,5 @@
 // Import Classes Here
+const Customer = require('./classes/Customer.js');
 const Cart = require("./Cart.js");
 
 // DO NOT EDIT BELOW THIS LINE
