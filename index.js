@@ -2,6 +2,7 @@
 const Product = require("./classes/Product");
 const Customer = require("./classes/Customer.js");
 const Cart = require("./classes/Cart.js");
+const Auth = require("./classes/Auth.js");
 
 // DO NOT EDIT BELOW THIS LINE
 try {
