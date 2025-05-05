@@ -1,12 +1,12 @@
 class Cart {
   constructor() {
     this.products = [];
-    this.total = this.total;
+    this.total = 0;
   }
 
   addProduct(product) {
     this.products.push(product);
-    this.total.total += product.price;
+    this.total += product.price;
   }
 
   removeProduct(index) {
