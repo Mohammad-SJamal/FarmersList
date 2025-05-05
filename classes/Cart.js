@@ -4,9 +4,19 @@ class Cart {
     this.total = 0;
   }
 
-  addProduct(product) {
-    this.products.push(product);
-    this.total += product.price;
+  addProduct(product, quantity) {
+    if (quantity < product.quantity) {
+      throw new Error(`I'm sorry there are only ${product.quantity} of this product left`);
+      return;
+    } else {
+      this.products.push(product);
+      this.total += product.price;
+    }
+
+    if (product.quantity == 0) {
+      product.inStock = false;
+    }
+    return product;
   }
 
   removeProduct(index) {
