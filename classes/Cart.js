@@ -16,6 +16,23 @@ class Cart {
       throw new Error("Item not found in cart");
     }
   }
+
+  getTotal() {
+    return this.products.reduce((acc, product) => acc + product.price, 0);
+  }
+
+  clearCart() {
+    this.products = [];
+    this.total = 0;
+  }
+
+  removeItemByName(product) {
+    const index = this.products.findIndex((item) => item.name === product.name);
+    if (index !== -1) {
+      this.products.splice(index, 1);
+      this.total -= product.price;
+    }
+  }
 }
 
 module.exports = Cart;
